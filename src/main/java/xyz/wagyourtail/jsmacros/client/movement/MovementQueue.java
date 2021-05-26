@@ -29,11 +29,11 @@ public class MovementQueue {
 
         Vec3d diff;
         if (predictions.size() > queuePos) {
-            diff = new Vec3d(player.getX() - predictions.get(0).getX(), player.getY() - predictions.get(0).getY(), player.getZ() - predictions.get(0).getZ());
+            diff = new Vec3d(player.x - predictions.get(0).getX(), player.y - predictions.get(0).getY(), player.z - predictions.get(0).getZ());
             if (diff.length() > 0.01D) {
                 LOGGER.debug("Pred of by x={}, y={}, z={}", diff.getX(), diff.getY(), diff.getZ());
-                LOGGER.debug("Player pos x={}, y={}, z={}", player.getX(), player.getY(), player.getZ());
-                predPoints.addPoint(player.getX(), player.getY(), player.getZ(), 0.02, 0xde070a);
+                LOGGER.debug("Player pos x={}, y={}, z={}", player.x, player.y, player.z);
+                predPoints.addPoint(player.x, player.y, player.z, 0.02, 0xde070a);
                 reCalcPredictions = true;
             } else {
                 LOGGER.debug("No Diff");
