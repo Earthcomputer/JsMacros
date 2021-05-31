@@ -55,6 +55,7 @@ public class JsMacrosEarlyRiser implements IMixinConnector {
             FakeFabricLoader.instance.loadMixins();
             LOGGER.log(Level.INFO, "[JsMacros] Loading Mixins.");
             Mixins.addConfiguration("jsmacros.mixins.json");
+            Mixins.addConfiguration("fabric-command-api-v1.mixins.json");
             loadManifestDeps();
         } catch (Exception e) {
             e.printStackTrace();
