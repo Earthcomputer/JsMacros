@@ -89,7 +89,7 @@ abstract class MixinClientPlayerEntity extends AbstractClientPlayerEntity {
             }
         } //else
         if (cancel) {
-            final SignEditScreen signScreen = new SignEditScreen(sign, true);
+            final SignEditScreen signScreen = new SignEditScreen(sign);
             client.openScreen(signScreen);
             for (int i = 0; i < 4; ++i) {
                 ((ISignEditScreen) signScreen).jsmacros_setLine(i, lines.get(i));
@@ -109,8 +109,8 @@ abstract class MixinClientPlayerEntity extends AbstractClientPlayerEntity {
         this.input.jumping = moveInput.jumping;
         this.input.sneaking = moveInput.sneaking;
         this.client.options.keySprint.setPressed(moveInput.sprinting);
-        this.setYaw(moveInput.yaw);
-        this.setPitch(moveInput.pitch);
+        this.yaw = moveInput.yaw;
+        this.pitch = moveInput.pitch;
 
         if (this.shouldSlowDown()) {
             // Don't ask me, this is the way minecraft does it.
