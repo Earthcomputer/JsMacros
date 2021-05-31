@@ -144,8 +144,7 @@ public class CommandBuilder {
     }
 
     public CommandBuilder uuidArgType(String name) {
-        argument(name, UuidArgumentType::uuid);
-        return this;
+        throw new NullPointerException("does not exist in 1.15.2");
     }
 
     public CommandBuilder regexArgType(String name, String regex, String flags) {
