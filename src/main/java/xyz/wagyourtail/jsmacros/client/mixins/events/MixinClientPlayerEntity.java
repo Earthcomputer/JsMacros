@@ -48,7 +48,7 @@ abstract class MixinClientPlayerEntity extends AbstractClientPlayerEntity {
     }
 
     @Shadow
-    public abstract boolean shouldSlowDown();
+    public abstract boolean isSneaking();
 
     @Override
     public void setAir(int air) {
@@ -112,7 +112,7 @@ abstract class MixinClientPlayerEntity extends AbstractClientPlayerEntity {
         this.yaw = moveInput.yaw;
         this.pitch = moveInput.pitch;
 
-        if (this.shouldSlowDown()) {
+        if (this.isSneaking()) {
             // Don't ask me, this is the way minecraft does it.
             this.input.movementSideways = (float) ((double) this.input.movementSideways * 0.3D);
             this.input.movementForward = (float) ((double) this.input.movementForward * 0.3D);
