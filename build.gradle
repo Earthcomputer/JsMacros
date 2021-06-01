@@ -96,6 +96,8 @@ dependencies {
     jarinjar "org.graalvm.regex:regex:${project.graal_version}"
     implementation group: 'com.ibm.icu', name: 'icu4j', version: '67.1'
     jarinjar group: 'com.ibm.icu', name: 'icu4j', version: '67.1'
+    implementation "com.mojang:brigadier:${project.brigadier_version}"
+    jarinjar "com.mojang:brigadier:${project.brigadier_version}"
 
     implementation "io.noties:prism4j:${prism_version}"
     jarinjar "io.noties:prism4j:${prism_version}"

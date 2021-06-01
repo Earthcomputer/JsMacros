@@ -5,6 +5,7 @@
     "compatibilityLevel": "JAVA_8",
     "client": [
         "access.MixinChatHud",
+        "access.MixinChatComponentStyle",
         "access.MixinClientPlayNetworkHandler",
         "access.MixinEntity",
         "access.MixinFontStorage",
